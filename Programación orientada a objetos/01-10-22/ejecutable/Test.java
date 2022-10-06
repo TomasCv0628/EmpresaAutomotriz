@@ -9,7 +9,7 @@ public class Test
     public static void main(String[] args) 
     {
         VentanaPrincipal miVentanaPrincipal = new VentanaPrincipal();
-        Empleado miEmpleado = null;
+        Empleado miEmpleado = new Empleado();
         Controlador miControlador = new Controlador(miVentanaPrincipal, miEmpleado);
 
     }

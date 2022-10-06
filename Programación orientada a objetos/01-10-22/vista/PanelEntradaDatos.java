@@ -16,13 +16,13 @@ public class PanelEntradaDatos extends JPanel
     private JLabel lbImagen;
     private ImageIcon iImagen;
     private JLabel lbNombre;
-    private JLabel lbAñoI;
-    private JLabel lbAñoN;
+    private JLabel lbAnnoI;
+    private JLabel lbAnnoN;
     private JLabel lbValor;
     private JLabel lbHoras;
     private JTextField tfNombre;
-    private JTextField tfAñoI;
-    private JTextField tfAñoN;
+    private JTextField tfAnnoI;
+    private JTextField tfAnnoN;
     private JTextField tfValor;
     private JTextField tfHoras;
     
@@ -48,13 +48,13 @@ public class PanelEntradaDatos extends JPanel
         lbNombre.setBounds(170,10,100,20);
         add(lbNombre);
         
-        lbAñoI = new JLabel("Año de Ingreso = ");
-        lbAñoI.setBounds(170,40,130,20);
-        add(lbAñoI);
+        lbAnnoI = new JLabel("Año de Ingreso = ");
+        lbAnnoI.setBounds(170,40,130,20);
+        add(lbAnnoI);
         
-        lbAñoN = new JLabel("Año de nacimiento = ");
-        lbAñoN.setBounds(170,70,130,20);
-        add(lbAñoN);
+        lbAnnoN = new JLabel("Edad ");
+        lbAnnoN.setBounds(170,70,130,20);
+        add(lbAnnoN);
         
         lbValor = new JLabel("Valor por hora");
         lbValor.setBounds(170,100,130,20);
@@ -67,23 +67,23 @@ public class PanelEntradaDatos extends JPanel
         //Creación y adición de campos de texto
         tfNombre = new JTextField();
         tfNombre.setBounds(300, 10, 60, 20);
-        add(tfNombre);
+        this.add(tfNombre);
         
-        tfAñoI = new JTextField();
-        tfAñoI.setBounds(300, 40, 60, 20);
-        add(tfAñoI);
+        tfAnnoI = new JTextField();
+        tfAnnoI.setBounds(300, 40, 60, 20);
+        this.add(tfAnnoI);
         
-        tfAñoN = new JTextField();
-        tfAñoN.setBounds(300, 70, 60, 20);
-        add(tfAñoN);
+        tfAnnoN = new JTextField();
+        tfAnnoN.setBounds(300, 70, 60, 20);
+        this.add(tfAnnoN);
         
         tfValor = new JTextField();
         tfValor.setBounds(300, 100, 60, 20);
-        add(tfValor);
+        this.add(tfValor);
 
         tfHoras = new JTextField();
         tfHoras.setBounds(300, 130, 60, 20);
-        add(tfHoras);
+        this.add(tfHoras);
         //Borde y titulo del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Datos de Entrada");
         borde.setTitleColor(Color.BLUE);
@@ -96,14 +96,14 @@ public class PanelEntradaDatos extends JPanel
         return tfNombre.getText();
     }
     
-    public String getAñoI()
+    public String getAnnoI()
     {
-        return tfAñoI.getText();
+        return tfAnnoI.getText();
     }
     
-    public String getAñoN()
+    public String getAnnoN()
     {
-        return tfAñoN.getText();
+        return tfAnnoN.getText();
     }
     public String getValor()
     {
@@ -117,8 +117,8 @@ public class PanelEntradaDatos extends JPanel
     public void borrar()
     {
         tfNombre.setText("");
-        tfAñoI.setText("");
-        tfAñoN.setText("");
+        tfAnnoI.setText("");
+        tfAnnoN.setText("");
         tfHoras.setText("");
         tfValor.setText("");
     }

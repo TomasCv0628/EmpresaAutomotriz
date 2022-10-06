@@ -4,83 +4,68 @@ public class Empleado
 {
     private static final int SALARIO_MIN = 1000000; 
     private static final int AUX_TRANSPORTE = 117172; 
-    private int añoNacimiento;
-    private int añoIngreso;
+    private int annoNacimiento;
+    private int annoIngreso;
     private String nombre;
     private int horasTrabajo;
     private int valorHora;
     private int salario;
     
-    public Empleado(String pNombre, int pAñoN, int pAñoI, int pHoras, int pValor, int pSalario)
-    {
-        this.añoNacimiento = pAñoN;
-        this.añoIngreso = pAñoI;
-        this.nombre = pNombre;
-        this.horasTrabajo = pHoras;
-        this.valorHora = pValor;
-        this.salario = pSalario; 
-    }
-    public Empleado()
-    {
-        this.añoNacimiento = 0;
-        this.añoIngreso = 0;
-        this.nombre = "";
-        this.valorHora = 0;
-        this.horasTrabajo = 0;
-        this.salario = 0;
-    }
-    
     public static int getSalarioMin()
     {
         return SALARIO_MIN;
     }
-    public int getAñoNacimiento()
+    public void setAnnoN(int pAnnoN)
     {
-        return this.añoNacimiento;
+        this.annoNacimiento = pAnnoN;
     }
-    public int getAñoIngreso()
+    public void setAnnoI(int pAnnoI)
     {
-        return this.añoNacimiento;
-    }
-    public String getNombre()
-    {
-        return this.nombre;
-    }
-    public int getHoras()
-    {
-        return this.horasTrabajo;
-    }
-    public int getValor()
-    {
-        return this.valorHora;
-    }
-    public void setAñoN(int pAñoN)
-    {
-        this.añoNacimiento = pAñoN;
-    }
-    public void setAñoI(int pAñoI)
-    {
-        this.añoIngreso = pAñoI;
+        this.annoIngreso = pAnnoI;
     }
     public void setNombre(String pNombre)
     {
         this.nombre= pNombre;
     }
+    public String getNombre()
+    {
+        return nombre;
+    }
     public void setValor(int pValor)
     {
         this.valorHora = pValor;
+    }
+    public int getValor()
+    {
+        return valorHora;
     }
     public void setHoras(int pHoras)
     {
         this.horasTrabajo = pHoras;
     }
+    public int getHoras()
+    {
+        return horasTrabajo;
+    }
     public void pFechaIngreso()
     {
-        setAñoI(2022 - getAñoIngreso());
+        int fI = 0;
+        fI = 2022 - annoIngreso;
+        annoIngreso = fI;
     }
     public void pEdad ()
     {
-        setAñoN(2022 - getAñoNacimiento());
+        int fN = 0;
+        fN = 2022 - annoNacimiento;
+        annoNacimiento = fN;
+    }
+    public int getAnnoIn()
+    {
+        return annoIngreso;
+    }
+    public int getAnnoNa()
+    {
+        return annoNacimiento;
     }
     public void hallarSalario()
     {
@@ -99,4 +84,5 @@ public class Empleado
     {
         return salario;
     }
+
 }

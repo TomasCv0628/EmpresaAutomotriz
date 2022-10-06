@@ -14,7 +14,7 @@ public class PanelOperaciones extends JPanel
     //Atributos
     //----------------------
     public JButton bImprimir;
-    public JButton bAñoI;
+    public JButton bAnnoI;
     public JButton bEdad;
     public JButton bSalario;
     
@@ -34,27 +34,21 @@ public class PanelOperaciones extends JPanel
         bImprimir = new JButton("Imprimir");
         bImprimir.setFont(new Font("Arial", BOLD, 12));
         bImprimir.setBounds(10,20,90,20);
-        add(bImprimir);
         bImprimir.setActionCommand("imprimir");
+        this.add(bImprimir);
         
-        
-        bAñoI = new JButton("AñoIngreso");
-        bAñoI.setFont(new Font("Arial", BOLD, 12));
-        bAñoI.setBounds(105,20,90,20);
-        add(bAñoI);
-        bAñoI.setActionCommand("fechaIngreso");
-        
-        bEdad = new JButton("Edad");
+        bEdad = new JButton("Borrar");
         bEdad.setFont(new Font("Arial", BOLD, 12));
         bEdad.setBounds(200,20,90,20);
-        add(bEdad);
-        bEdad.setActionCommand("edad");
+        bEdad.setActionCommand("borrar");
+        this.add(bEdad);
+
         
-        bSalario = new JButton("Salario");
+        bSalario = new JButton("Salir");
         bSalario.setFont(new Font("Arial", BOLD, 12));
         bSalario.setBounds(295,20,80,20);
-        add(bSalario);
-        bSalario.setActionCommand("salario");
+        bSalario.setActionCommand("salir");
+        this.add(bSalario);
         
         //Borde y titulo del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");

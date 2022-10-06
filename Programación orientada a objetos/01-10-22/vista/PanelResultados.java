@@ -47,9 +47,15 @@ public class PanelResultados extends JPanel
         taResultado.setText("");
     }
     
+    
     //Mostrar resultado
-    public void mostrarResultado(String msj)
+    public void mostrarResultado(int annoIngreso , int annoNacimiento, int salario, int horasTrabajo, String nombre)
     {
-        taResultado.append(msj+"\n");
+
+        taResultado.append("\nEl nombre del empleado es " + nombre + "\n Trabajo " + horasTrabajo + " horas este mes " );
+        taResultado.append("\nEl empleado nacio el año " + annoNacimiento);
+        taResultado.append("\nEl empleado lleva " + annoIngreso + " en la empresa");
+        taResultado.append("\nEl salario del usuario es " + salario);
+        
     }
 }
